@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHS Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item">Commonwealth High School Accounts</li>
+          <li class="nav-item">
+            <input
+              type="text"
+              placeholder="Search"
+              data-search
+              id="search-bar"
+              oninput="searchContent()"
+            />
+            <button type="button" id="logMeOut" name="logMeOut">Log Out</button>
+          </li>
+        </ul>
+      </nav>
+      <div class="teacher-container">
+        <div class="content">
+          <div>
+            <h1>Teacher Information Here</h1>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Select Section</button>
+            <div class="dropdown-content">
+              <a href="#" id="section-Apacible">9-Apacible</a>
+              <a href="#" id="section-Einstein">9-Einstein</a>
+              <a href="#" id="section-K-Liwayway">9-K-Liwayway</a>
+              <a href="#" id="section-Lopez-Jaena">9-Lopez-Jaena</a>
+              <a href="#" id="section-Agoncillo">9-Agoncillo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content" id="Attendance">
+          <h1>Attendance</h1>
+          <table id="attendanceTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content" id="Grades">
+          <h1>Music Grades</h1>
+          <table id="gradesTable-M">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Quiz</th>
+                <th>Seatwork</th>
+                <th>Seatwork</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content" id="Grades">
+          <h1>Arts Grades</h1>
+          <table id="gradesTable-A">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Quiz</th>
+                <th>Seatwork</th>
+                <th>Seatwork</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content" id="Grades">
+          <h1>PE Grades</h1>
+          <table id="gradesTable-P">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Quiz</th>
+                <th>Seatwork</th>
+                <th>Seatwork</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content" id="Grades">
+          <h1>Health Grades</h1>
+          <table id="gradesTable-H">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Quiz</th>
+                <th>Seatwork</th>
+                <th>Seatwork</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="content" id="Analytics">
+        <h1>Analytics Here</h1>
+      </div>
+    </div>
+    <script type="module" defer src="js/firebaseConfig.js"></script>
+    <script type="module" defer src="js/attendance.js"></script>
+    <script type="module" defer src="js/grades.js"></script>
+    <script type="module" defer src="js/dropdown.js"></script>
+    <script type="module" defer src="js/main.js"></script>
+  </body>
+</html>
